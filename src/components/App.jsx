@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 function App() {
-  return <div />;
+  const [count, setCount] = useState(0);
+
+  // const [red, green, blue] = [46, 204, 113];
+  // console.log(green);
+
+  function increase() {
+    setCount(count + 1);
+  }
+
+  function decrease() {
+    setCount(count - 1);
+  }
+
+  return (
+    <div className="container">
+      <h1>{count}</h1>
+      <button onClick={increase}>+</button>
+      <button onClick={decrease}>-</button>
+    </div>
+  );
 }
 
 export default App;
